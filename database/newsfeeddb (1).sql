@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2022 at 05:02 AM
+-- Generation Time: Mar 26, 2022 at 05:26 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -78,7 +78,32 @@ INSERT INTO `postinfo` (`ID`, `message`, `date`) VALUES
 (40, 'hello', '2022-03-18 13:02:56'),
 (41, 'hello', '2022-03-18 13:05:21'),
 (42, 'hello', '2022-03-18 13:06:23'),
-(43, 'hello', '2022-03-18 13:07:13');
+(43, 'hello', '2022-03-18 13:07:13'),
+(44, 'ello', '2022-03-24 12:46:15'),
+(45, 'ello', '2022-03-24 12:46:33'),
+(46, 'ello', '2022-03-24 12:48:30'),
+(47, 'jhhh', '2022-03-24 17:55:18'),
+(48, 'jhhh', '2022-03-24 17:55:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userlogin`
+--
+
+CREATE TABLE `userlogin` (
+  `admin_id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `userlogin`
+--
+
+INSERT INTO `userlogin` (`admin_id`, `username`, `password`) VALUES
+(1, 'nicola', '$2y$10$bVxy96uh0Fh9/xWymmiG6eg3m5otHw0fWw4cV6UNhmCu53Dg2jTb.'),
+(3, 'maryjane', '$2y$10$LuwkR649ikcZopdFdErd3OCLRYPraJT22OTuQiykVUs8rH.wF9LeG');
 
 --
 -- Indexes for dumped tables
@@ -91,6 +116,12 @@ ALTER TABLE `postinfo`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `userlogin`
+--
+ALTER TABLE `userlogin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -98,7 +129,13 @@ ALTER TABLE `postinfo`
 -- AUTO_INCREMENT for table `postinfo`
 --
 ALTER TABLE `postinfo`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+
+--
+-- AUTO_INCREMENT for table `userlogin`
+--
+ALTER TABLE `userlogin`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
