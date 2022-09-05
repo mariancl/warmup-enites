@@ -8,16 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="newsfeed.css">
 </head>
 <body>
-	<?php require 'partials.php' ?>
+	
 	 
-
 	<h1> Newsfeed </h1>
 
 
 	<div class = "column">
 		
-	
-
 	<section class="textbox">
 		<div class="textbox-heading">
 			<h2>What's on your mind?</h2>
